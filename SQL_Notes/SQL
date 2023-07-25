@@ -1,0 +1,89 @@
+=========================================================================================================================================================
+																			SQL -structure query
+=========================================================================================================================================================
+
+What is SQL?
+	SQL stands for Structured Query Language. It is a programming language used for managing and manipulating relational databases.
+	SQL allows you to perform operations like creating, retrieving, updating, and deleting data in databases.
+
+What are the different types of SQL statements?
+	SELECT: Retrieves data from a database table.
+	INSERT: Inserts new data into a table.
+	UPDATE: Modifies existing data in a table.
+	DELETE: Removes data from a table.
+	CREATE: Creates a new table, database, or other database objects.
+	ALTER: Modifies the structure of an existing table.
+	DROP: Deletes a table, database, or other database objects.
+
+What is the difference between UNION and UNION ALL?
+	UNION: Combines the result sets of two or more SELECT statements, removing duplicate rows.
+	UNION ALL: Also combines the result sets of two or more SELECT statements, including duplicate rows.
+
+Explain the difference between INNER JOIN and OUTER JOIN
+	INNER JOIN: Retrieves records that have matching values in both tables being joined.
+	LEFT JOIN: Retrieves all records from the left (first) table and the matching records from the right (second) table.
+	RIGHT JOIN: Retrieves all records from the right (second) table and the matching records from the left (first) table.
+	FULL JOIN: Retrieves all records when there is a match in either the left (first) table or the right (second) table.
+
+What is a primary key and foreign key?
+	Primary key: A primary key is a column or a set of columns that uniquely identifies each record in a table.
+	Foreign key: A foreign key is a column or a set of columns that establishes a link or a relationship between two tables.
+					It refers to the primary key of another table.
+
+What is normalization?
+	Normalization is the process of organizing data in a database to eliminate redundancy and dependency issues.
+	It involves breaking down a database into smaller, well-structured tables that follow specific rules (normal forms) to ensure data integrity, reduce data duplication, and improve database efficiency.
+
+What is an index?
+	An index is a database object used to improve the performance of data retrieval operations. 
+	It is a data structure that allows for efficient lookup and searching of records based on specific columns. Indexes are created on one or more columns of a table to speed up query execution by reducing the number of disk I/O operations required.
+
+What is a subquery?
+	A subquery is a query nested within another query. It is used to retrieve data that is based on the results of another query. 
+	A subquery can be written within the WHERE, HAVING, or FROM clause of the main query and can be used to filter, calculate, or retrieve specific data for further processing.
+
+What is the difference between WHERE and HAVING clauses?
+	WHERE clause: The WHERE clause is used to filter rows based on specific conditions in a SELECT, UPDATE, or DELETE statement. It is applied before any aggregate functions are calculated.
+	HAVING clause: The HAVING clause is used to filter the results of aggregate functions in a SELECT statement. It is applied after the aggregate functions have been calculated and allows filtering based on aggregate results.
+
+What is the ACID principle in database transactions?
+	ACID stands for Atomicity, Consistency, Isolation, and Durability. 
+	It is a set of properties that ensure reliability and integrity in database transactions:
+
+		Atomicity: Transactions are treated as a single, indivisible unit of work. They either complete successfully, making all changes permanent, or roll back if any part fails.
+		Consistency: Transactions bring the database from one valid state to another. The database remains in a consistent state before and after the transaction.
+		Isolation: Transactions occur independently and are isolated from other transactions until they are completed. Concurrent transactions do not interfere with each other.
+		Durability: Once a transaction is committed, its changes are permanent and will survive any subsequent system failures.
+
+
+How do you handle NULL values in SQL?
+	Null values represent the absence of data in a column. To handle NULL values, you can use the following approaches:
+	IS NULL: Use the IS NULL operator to check if a column contains a NULL value.
+	IS NOT NULL: Use the IS NOT NULL operator to check if a column does not contain a NULL value.
+	COALESCE: Use the COALESCE function to replace NULL values with a specified default value.
+	NULLIF: Use the NULLIF function to return NULL if two values are equal, otherwise, return the first value.
+
+
+What are stored procedures and functions?
+	Stored procedures: Stored procedures are a set of pre-compiled SQL statements that are stored in the database.
+						They can be executed using a procedure call. Stored procedures can accept input parameters, perform database operations, and return results.
+	Functions: Functions are similar to stored procedures, but they return a single value. They can be used in SQL statements,
+						such as SELECT, WHERE, and JOIN clauses. Functions can accept input parameters and perform calculations or operations to return a computed value.
+
+What is the difference between a view and a table?
+	Table: A table is a basic database object that stores data in rows and columns. 
+			It represents a physical structure in the database and contains the actual data.
+	View: A view is a virtual table derived from one or more tables or views.
+			It does not store data physically but provides a way to present data in a customized manner by combining and filtering data from different tables. Views are defined by queries and can be used for simplified data access and security purposes.
+
+How do you optimize SQL queries?
+		Use indexes: Analyze query execution plans and create indexes on columns used in join conditions, WHERE clauses, and ORDER BY/GROUP BY clauses.
+		Avoid unnecessary joins: Review query logic and eliminate any unnecessary joins or redundant table references.
+		Limit result set: Use appropriate filtering conditions to limit the number of rows returned by a query.
+		Optimize database schema: Ensure the database schema is well-designed, normalized, and efficient.
+		Use appropriate data types: Choose the correct data types to minimize storage and improve query performance.
+		What is the difference between a clustered and non-clustered index?
+		Clustered index: A clustered index determines the physical order of data in a table.
+						A table can have only one clustered index, and it affects the way data is stored on disk.
+		Non-clustered index: A non-clustered index is a separate structure from the table that contains a copy of the indexed columns and a pointer to the actual data.
+								A table can have multiple non-clustered indexes, and they provide quick access to data based on the indexed columns.
